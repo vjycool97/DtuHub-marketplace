@@ -1,0 +1,3 @@
+logs
+
+-- A new column added in " wp_college" table named as "college_name_slug"

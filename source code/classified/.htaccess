@@ -1,0 +1,17 @@
+DirectoryIndex index.php
+ AddDefaultCharset utf-8
+
+ RewriteEngine on
+ Options +FollowSymlinks -MultiViews -Indexes   
+
+ RewriteBase /
+#RewriteCond %{HTTP_HOST} !^www.dtuhub.com$ [NC]
+#RewriteRule ^(.*)$ http://www.dtuhub.com/$1 [L,R=301]
+ RewriteRule ^category/([0-9]+)/?$ category.php?id=$1 [NC,L]
+ 
+ RewriteRule ^classified/([0-9]+)/?$ classified.php?id=$1 [NC,L]
+
+#RewriteCond %{THE_REQUEST} ^.*/index.php
+#RewriteRule ^(.*)index.php$ http://www.dtuhub.com/$1 [R=301,L]
+
+
